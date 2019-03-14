@@ -3,7 +3,11 @@ project(demo_cmake_unity C)
 
 set(CMAKE_C_STANDARD 99)
 
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/externals/cmake-codecov/cmake" ${CMAKE_MODULE_PATH})
+find_package(codecov)
+
 add_executable(demo_cmake_unity main.c)
+add_coverage(demo_cmake_unity)
 
 enable_testing()
 
@@ -15,3 +19,6 @@ set_tests_properties (MainAssets
         PROPERTIES PASS_REGULAR_EXPRESSION "233")
 
 # Unit Test
+
+# evaluate coverage
+coverage_evaluate()
