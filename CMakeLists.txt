@@ -19,6 +19,11 @@ set_tests_properties (MainAssets
         PROPERTIES PASS_REGULAR_EXPRESSION "233")
 
 # Unit Test
+option(BUILD_TEST "Build the unit tests" ON)
+if(BUILD_TEST)
+    add_subdirectory(externals)
+    add_subdirectory(test)
+endif()
 
 # evaluate coverage
 coverage_evaluate()
