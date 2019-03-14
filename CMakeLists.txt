@@ -3,7 +3,7 @@ project(demo_cmake_unity C)
 
 set(CMAKE_C_STANDARD 99)
 
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/externals/cmake-codecov/cmake" ${CMAKE_MODULE_PATH})
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/externals/CMake-codecov/cmake" ${CMAKE_MODULE_PATH})
 find_package(codecov)
 
 add_executable(demo_cmake_unity main.c)
