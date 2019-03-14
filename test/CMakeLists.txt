@@ -7,5 +7,6 @@ if(BUILD_TEST)
         target_link_libraries("${unit_test}" unity)
         add_test(NAME "${unit_test}"
                 COMMAND "./${unit_test}")
+        add_coverage("${unit_test}")
     endforeach()
 endif()
